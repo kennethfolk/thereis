@@ -78,9 +78,9 @@ function drawSenseInputScreen() {
 
 	if (!g_user.buttons) {
 		g_user.buttons = [
-			'', 'seeing', 'other',
+			'other', 'seeing', 'positive-emotion',
 			'thinking', '', 'hearing',
-			'tasting', 'feeling', 'smelling'
+			'negative-emotion', 'feeling', 'smelling-tasting'
 		].join('\n')
 	}
 	var senses = g_user.buttons.split('\n').slice(0, 9)
