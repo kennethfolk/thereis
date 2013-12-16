@@ -112,9 +112,9 @@ function drawSenseInputScreen() {
         if (text == "#feed") {
             function printHappiness() {
                 d.append($('<div/>happiness</div>'))
-                setTimeout(printHappiness, 5000)
+            //    setTimeout(printHappiness, 5000)
             }
-        //    setTimeout(printHelloWorld, 5000)
+            setTimeout(printHappiness, 5000)
         } else if (text) {
             d.append($('<div style="font-size:x-large;font-weight:bold"/>').text(text))
             d.css('background', colors[0])
