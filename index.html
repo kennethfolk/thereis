@@ -97,13 +97,12 @@ function drawSenseInputScreen() {
         }
         senseColors[s] = [rgb(color), rgb(highlight)]
     })
-    Math.random = oldRandom
-
+    Math.random = oldRando
     senseSounds = {
-    //  'feeling' : createSound('static/feeling.wav'),
-    //  'thinking' : createSound('static/thinking.wav'),
-    //  'seeing' : createSound('static/seeing.wav'),
-    //  'hearing' : createSound('static/hearing.wav')
+      'feeling' : createSound('static/feeling.wav'),
+      'thinking' : createSound('static/thinking.wav'),
+      'seeing' : createSound('static/seeing.wav'),
+      'hearing' : createSound('static/hearing.wav')
     }
 
     var buttons = []
