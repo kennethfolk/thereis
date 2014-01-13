@@ -253,7 +253,14 @@ function drawSenseInputScreen(senseCounts) {
                         var letters = []
                         _.each(_.range(26), function (i) {
                                 var t = Math.sqrt((i + .4) * 11)
-                                var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+
+                                //var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+
+                                if (angleAgg > 0) {
+                                    var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+                                } else {
+                                    var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+                                }
                                 var y = (h / 2) + spiralGap * t * Math.sin(t)
 
                                 var a = String.fromCharCode('A'.charCodeAt(0) + i)
