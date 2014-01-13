@@ -129,12 +129,14 @@ function drawSenseInputScreen(senseCounts) {
                 height : squareSize,
                 background : 'white'
         })
+        
+//Button label defaults
 
         if (!g_user.buttons) {
                 g_user.buttons = [
-                        '', 'seeing', 'other',
+                        'other', 'seeing', 'pos-emotion',
                         'thinking', '', 'hearing',
-                        'tasting', 'feeling', 'smelling'
+                        'neg-emotion', 'feeling', 'smelling-tasting'
                 ].join('\n')
         }
         var senses = g_user.buttons.split('\n').slice(0, 9)
