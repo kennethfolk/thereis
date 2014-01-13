@@ -248,7 +248,7 @@ function drawSenseInputScreen(senseCounts) {
                         var d = $('<div style="position:absolute;left:0;top:0;width:100%;height:100%;background:white;z-index:10000"/>')
                         $('body').append(d)
 
-                        var size = Math.min(w, h) / 10
+                        var size = Math.min(w, h) * .12
                         var spiralGap = size * .25
                         var letters = []
                         _.each(_.range(26), function (i) {
