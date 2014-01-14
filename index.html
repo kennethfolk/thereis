@@ -130,8 +130,7 @@ function drawSenseInputScreen(senseCounts) {
         background : 'white'
     })
 
-//Button label defaults
-
+    //Button label defaults
     if (!g_user.buttons) {
         g_user.buttons = [
             'other', 'seeing', 'pos-emotion',
@@ -296,7 +295,11 @@ function drawSenseInputScreen(senseCounts) {
                             'z-index' : 1000
                         }).children().css({
                             'background' : 'lightblue',
-                            'margin-top' : -size + 'px'
+                            'margin-top' : -size + 'px',
+
+                            'width' : size*1.2 + 'px',
+                            'height' : size*1.2 + 'px'
+                            'margin-left' : -(size*.1 + 'px')
                         })
                         scrollTo = b.text()
                     } else {
@@ -304,11 +307,44 @@ function drawSenseInputScreen(senseCounts) {
                             'z-index' : 0
                         }).children().css({
                             'background' : 'white',
-                            'margin-top' : '0px'
+                            'margin-top' : '0px',
+
+                            'width' : size + 'px',
+                            'height' : size + 'px',
+                            'margin-left' : '0px'
                         })
                     }
                 })
             }
+/*
+if (tx >= bx && tx < bx + b.width() && ty >= by && ty < by + b.height()) {
+                        b.css({
+                            'z-index' : 1000
+                        }).children().css({
+                            'background' : 'lightblue',
+                            'margin-top' : -size + 'px', <-- comma here
+                            
+                            'width' : size*1.2 + 'px',
+                            'height' : size*1.2 + 'px',
+                            'margin-left' : -(size*.1) + 'px'
+                        })
+                        scrollTo = b.text()
+                    } else {
+                        b.css({
+                            'z-index' : 0
+                        }).children().css({
+                            'background' : 'white',
+                            'margin-top' : '0px', <-- comma here
+
+                            'width' : size + 'px',
+                            'height' : size + 'px',
+                            'margin-left' : '0px'
+                        })
+                    }
+
+*/
+
+
             ontouch = function () {
                 if (scrollTo != null) {
                 $('body').empty().append(drawWordList(angleAgg > 0 ? emotions : sensations, scrollTo))
