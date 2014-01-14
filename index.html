@@ -284,6 +284,7 @@ function drawSenseInputScreen(senseCounts) {
                         })
 
                         var scrollTo = null
+                        //this next function is called when finger moves on nautilus
                         my_ontouchmove = function (tx, ty) {
                                 scrollTo = null
                                 _.each(letters, function (b) {
@@ -309,8 +310,9 @@ function drawSenseInputScreen(senseCounts) {
                                 })
                         }
                         ontouch = function () {
+                                if (scrollTo != null) {
                                 $('body').empty().append(drawWordList(angleAgg > 0 ? emotions : sensations, scrollTo))
-                        }
+}
                 }
         }
 
