@@ -312,9 +312,8 @@ function drawSenseInputScreen(senseCounts) {
                         ontouch = function () {
                                 if (scrollTo != null) {
                                 $('body').empty().append(drawWordList(angleAgg > 0 ? emotions : sensations, scrollTo))
-}
-                }
-        }
+                                }
+                        }
 
         var x = _.map(senses, function (s) {
                 return drawButton(s, senseColors[s])
