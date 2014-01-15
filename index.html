@@ -134,7 +134,7 @@ function drawSenseInputScreen(senseCounts) {
     if (!g_user.buttons) {
         g_user.buttons = [
             'other', 'seeing', 'pos-emotion',
-            'thinking', 'test', 'hearing',
+            'thinking', '', 'hearing',
             'neg-emotion', 'feeling', 'smelling-tasting'
         ].join('\n')
     }
@@ -259,7 +259,7 @@ function drawSenseInputScreen(senseCounts) {
                     //adjust nautilus x axis
                     var x = (w / 2) + (size * .35) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
                 } else {
-                    var x = (w / 2) + (size * .35) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+                    var x = (w / 2) + (size * .70) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
                 }
                 var y = (h / 2) + spiralGap * t * Math.sin(t)
 
