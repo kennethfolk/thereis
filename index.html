@@ -256,8 +256,8 @@ function drawSenseInputScreen(senseCounts) {
                 //var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
 
                 if (angleAgg > 0) {
-//add something here to x to shift right
-                    var x = (w / 2) + (size * .35) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
+                    //add something here to x to shift nautilus right
+                    var x = (w / 2) + (size * .70) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
                 } else {
                     var x = (w / 2) + (spiralGap * t * Math.cos(t)) * (angleAgg > 0 ? 1 : -1)
                 }
@@ -297,7 +297,7 @@ function drawSenseInputScreen(senseCounts) {
                             'background' : 'lightblue',
                             //position popups on y axis
                             'margin-top' : -(size*1.7) + 'px',
-                            //popup letter size
+                            //popup letter box size
                             'width' : size*1.6 + 'px',
                             'height' : size*1.6 + 'px',
                             //position popups on x axis
