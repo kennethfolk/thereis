@@ -295,10 +295,12 @@ function drawSenseInputScreen(senseCounts) {
                             'z-index' : 1000
                         }).children().css({
                             'background' : 'lightblue',
-                            'margin-top' : -size + 'px',
+                            //position popups on y axis
+                            'margin-top' : -(size*1.5) + 'px',
                             //popup letter size
                             'width' : size*1.6 + 'px',
                             'height' : size*1.6 + 'px',
+                            //position popups on x axis
                             'margin-left' : -(size*.3) + 'px'
                         })
                         scrollTo = b.text()
