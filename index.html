@@ -301,7 +301,9 @@ function drawSenseInputScreen(senseCounts) {
                             'width' : size*1.6 + 'px',
                             'height' : size*1.6 + 'px',
                             //position popups on x axis
-                            'margin-left' : -(size*.3) + 'px'
+                            'margin-left' : -(size*.3) + 'px',
+                            //set letter size in popups
+                            'font-size' : 'large'
                         })
                         scrollTo = b.text()
                     } else {
@@ -318,7 +320,7 @@ function drawSenseInputScreen(senseCounts) {
                     }
                 })
             }
-            
+
             ontouch = function () {
                 if (scrollTo != null) {
                 $('body').empty().append(drawWordList(angleAgg > 0 ? emotions : sensations, scrollTo))
